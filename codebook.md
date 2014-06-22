@@ -11,8 +11,8 @@ Getting and Cleaning Data, Month 3 of Coursera series on Data Science
    1.2 Selection of variables <br>
 2. *Variable description: ("codebook"):* Information about variables included in the tidy dat set. <br>
    2.1 Measurement variables <br>
-      2.1.1 Basis for descriptive variable name choices <br>
-      2.1.2 Units <br>
+   &nbsp;&nbsp;&nbsp; 2.1.1 Basis for descriptive variable name choices <br>
+   &nbsp;&nbsp;&nbsp; 2.1.2 Units <br>
    2.2 Category variables <br>
    2.3 List of variable names in the tidy data
 
