@@ -6,15 +6,19 @@ Getting and Cleaning Data, Month 3 of Coursera series on Data Science
 
 Table of Contents
 
-1. Study design <br>
-   Description of collected data
-
-2. Variable description ("codebook") <br>
-   Information about variables included in the tidy dat set.
+1. *Study design:* Description of collected data <br>
+   1.1 Background
+   1.2 Selection of variables
+2. *Variable description: ("codebook"):* Information about variables included in the tidy dat set. <br>
+   2.1 Measurement variables
+      2.1.1 Basis for descriptive variable name choices
+      2.1.2 Units
+   2.2 Category variables
+   2.3 List of variable names in the tidy data
 
 For a description of the R script and associated data files, please refer to README.md.
 
-===========================================================================
+---------------------------------------------------------------------------
 
 ## 1. Study design
 
@@ -24,11 +28,11 @@ The programming assignment provides the following background for the experiment 
 
 > "Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:"
 
-[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 Below is a link that contains the data for this project:
 
-[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 
 ### 1.2 Selection of variables
@@ -48,7 +52,7 @@ In summary, I chose a total of 86 measurements:
 (7 of the 53 time-domain features describe the angle between a pair of vectors.)
 
 David's Assignment FAQ <br>
-[https://class.coursera.org/getdata-004/forum/thread?thread_id=106][(https://class.coursera.org/getdata-004/forum/thread?thread_id=106)
+https://class.coursera.org/getdata-004/forum/thread?thread_id=106
 
 > * columns are measurements on the mean and standard deviation
 > 
@@ -56,12 +60,12 @@ David's Assignment FAQ <br>
 > 
 
 Or as Abigal Groff succintly clarified: <br>
-[https://class.coursera.org/getdata-004/forum/thread?thread_id=106#comment-339][(https://class.coursera.org/getdata-004/forum/thread?thread_id=106#comment-339)
+https://class.coursera.org/getdata-004/forum/thread?thread_id=106#comment-339
 
 > "The features.txt file contains multiple entries with mean() or std() occurring in different parts of the name. Its up to you to decide which ones to use (ie only -mean()? or also include -meanFreq()?)"
 
 Again, Scott von Kleeck (Community TA) clarifies that you can choose either to include or exclude measurements with "meanFreq" in their names: <br>
-[https://class.coursera.org/getdata-004/forum/thread?thread_id=219#comment-1213](https://class.coursera.org/getdata-004/forum/thread?thread_id=219#comment-1213)
+https://class.coursera.org/getdata-004/forum/thread?thread_id=219#comment-1213
 
 > "It is your choice if you want to include those variables or exclude them.  Either way, note your decision in your code book so it is clear that you made a choice."
 
