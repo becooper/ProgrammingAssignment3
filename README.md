@@ -29,12 +29,13 @@ For output produced by this R script, see the following section.
 The following "tidy data" is a comma-separate value (csv) file that may be read in R using the read.csv() function:
 
 ```
-average_measurements
+average_measurements.csv
 ```
 
 This file contains the average of each "mean" and "std" variable, grouped into 180 categories.  The categories are defined by each combination of 6 activities and 30 subjects.  (The file ```codebook.md``` describes the variables in much greater detail.)
 
 This format meets the requirements of tidy data:
+
 1. Each variable is in a unique column.
 2. Each observation is in a unique row.
 3. Each observational unit forms a unique table.
@@ -48,7 +49,7 @@ Download the input files listed in the above section, available in this github r
 
 ### 4. Explanation of algorithm
 
-The steps below explain the algorithm.
+The steps below explain the algorithm.  See the R source file for details.
 
 #### 4.1 Read the feature names
 
@@ -63,7 +64,7 @@ The make.names() function is one way to see what characters are considered illeg
 
 #### 4.3 Extract "only the measurements on the mean and standard deviation for measurement"
 
-There is much discussion on the course web site about the ambiguity of this step.  Does this include features derived from the mean, such as "fBodyAcc-meanFreq()-X" or "angle(X,gravityMean)"?  The only guidance is to explain your choice.
+There is much discussion on the course web site about the ambiguity of this step.  Does this include features derived from the mean, such as "fBodyAcc-meanFreq()-X" or "angle(X,gravityMean)"?  The only guidance is to explain your choice.  (See the ```codebook.md``` file for further explanation and justification.)
 
 Therefore, I chose to err on the side of caution.  I believe that it is better to include additional, unnecessary features than to exclude necessary features.
 
@@ -77,13 +78,13 @@ Previous examination determined that all columns are numeric.  For example, sum(
 
 When combining, include only the "mean" and "std" features, as described above.
 
-> xcombined: 10299 rows, 86 columns (53 "mean" + 33 "std")
-> ycombined: 10299 rows, 1 column
+> xcombined: 10299 rows, 86 columns (53 "mean" + 33 "std") <br>
+> ycombined: 10299 rows, 1 column <br>
 > scombined: 10299 rows, 1 column
 
 #### 4.6 Assign descriptive column names
 
-For the "mean" and "std" features, I edited a separate file that expands each of the original feature names into a more descriptive feature name.
+For the "mean" and "std" features, I edited a separate file (```myfeatures.txt```) that expands each of the original feature names into a more descriptive feature name.
 
 The 1st column contains the raw names (after removing illegal characters). <br>
 The 2nd column contains the descriptive feature names. <br>
