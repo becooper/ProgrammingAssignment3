@@ -7,21 +7,21 @@
 
 #--------------------------------------------------------------------------
 #
-# The following files are required by this R script:
+# The following files are required by this R script (run_analysis.R):
 #
-# features.txt
-# myfeaturenames.txt
-# activity_labels.txt
-# train/X_train.txt
-# train/y_train.txt
-# train/subject_train.txt
-# test/X_test.txt
-# test/y_test.txt
-# test/subject_test.txt
+#   features.txt
+#   myfeaturenames.txt
+#   activity_labels.txt
+#   train/X_train.txt
+#   train/y_train.txt
+#   train/subject_train.txt
+#   test/X_test.txt
+#   test/y_test.txt
+#   test/subject_test.txt
 #
 # The output data frame will be written to the following file:
 #
-# average_measurements.csv
+#   average_measurements.csv
 #
 # This file contains the average of each "mean" and "std" variable, grouped
 # into 180 categories.  The categories are defined by each combination of 6
@@ -210,8 +210,17 @@ library(reshape2)  # melt() and dcast()
 m <- melt(df,id.vars=c("Activity","Subject"))
 d <- dcast(m, Activity + Subject ~ variable,mean)
 
+#--------------------------------------------------------------------------
+#
+# 10. Write the data frame to an output file
+#     in csv (comma-separated value) format
+#
+#--------------------------------------------------------------------------
+
 write.csv(d,"average_measurements.csv")
 
+
+#--------------------------------------------------------------------------
 # Instead of using melt() and dcast(), you can use tapply() to perform
 # conventional subsetting.  However, it can perform the aggregation on only
 # one variable at a time:
