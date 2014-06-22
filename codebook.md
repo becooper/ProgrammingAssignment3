@@ -6,10 +6,10 @@ Getting and Cleaning Data, Month 3 of Coursera series on Data Science
 
 Table of Contents
 
-1. Study design
+1. Study design <br>
    Description of collected data
 
-2. Variable description ("codebook")
+2. Variable description ("codebook") <br>
    Information about variables included in the tidy dat set.
 
 For a description of the R script and associated data files, please refer to README.md.
@@ -43,11 +43,11 @@ I chose to include all variants of "mean" and "std," including those mentioned a
 
 In summary, I chose a total of 86 measurements:
 
-53 features are time-domain measurements.
-33 features are frequency-domain measurements.
+53 features are time-domain measurements. <br>
+33 features are frequency-domain measurements. <br>
 (7 of the 53 time-domain features describe the angle between a pair of vectors.)
 
-David's Assignment FAQ
+David's Assignment FAQ <br>
 [https://class.coursera.org/getdata-004/forum/thread?thread_id=106][(https://class.coursera.org/getdata-004/forum/thread?thread_id=106)
 
 > * columns are measurements on the mean and standard deviation
@@ -55,12 +55,12 @@ David's Assignment FAQ
 > "Based on column names in the features is an open question as to is the the entries that include mean() and std() at the end, or does it include entries with mean in an earlier part of the name as well. There are no specific marking critieria on the number of columns. It is up to you to make a decision and explain what you did to the data. Make it easy for people to give you marks by explaining your reasoning."
 > 
 
-Or as Abigal Groff succintly clarified:
+Or as Abigal Groff succintly clarified: <br>
 [https://class.coursera.org/getdata-004/forum/thread?thread_id=106#comment-339][(https://class.coursera.org/getdata-004/forum/thread?thread_id=106#comment-339)
 
 > "The features.txt file contains multiple entries with mean() or std() occurring in different parts of the name. Its up to you to decide which ones to use (ie only -mean()? or also include -meanFreq()?)"
 
-Again, Scott von Kleeck (Community TA) clarifies that you can choose either to include or exclude measurements with "meanFreq" in their names:
+Again, Scott von Kleeck (Community TA) clarifies that you can choose either to include or exclude measurements with "meanFreq" in their names: <br>
 [https://class.coursera.org/getdata-004/forum/thread?thread_id=219#comment-1213](https://class.coursera.org/getdata-004/forum/thread?thread_id=219#comment-1213)
 
 > "It is your choice if you want to include those variables or exclude them.  Either way, note your decision in your code book so it is clear that you made a choice."
@@ -81,7 +81,7 @@ I chose fully descriptive names without any abbreviations, although this is like
 
 As specified in the original data (README.txt), the experiment collected measurements every 0.02 seconds, or at a frequency of 50 Hz.
 
-Time domain measurements: 0.02 seconds per sample
+Time domain measurements: 0.02 seconds per sample <br>
 Frequency domain measurements: 50 Hz (50 samples per second)
 
 Additional background is available in the README.txt file of the original data.  For example, the experimenters processed the raw sensor measurements within a 128-sample (2.56-sec) sliding window with 50% overlap.  They removed noise but did not mention any details.
@@ -115,9 +115,9 @@ There is one row for each combination of 6 activities and 30 subjects.  (Thus, 6
 
 Each observation includes the average of the 86 variables within that particular group, defined for a particular activity and subject.
 
- 2 features (Activity and Subject) were added by the R script
-53 features are time-domain measurements.
-33 features are frequency-domain measurements.
+ 2 features (Activity and Subject) were added by the R script <br>
+53 features are time-domain measurements. <br>
+33 features are frequency-domain measurements. <br>
 
 ```
 Activity
