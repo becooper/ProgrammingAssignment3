@@ -3,7 +3,18 @@ ProgrammingAssignment3
 
 Coursera Data Science Month 3 (Getting and Cleaning Data) programming assignment
 
-===========================================================================
+---------------------------------------------------------------------------
+
+For additional explanation about the data and variables, see ```codebook.md```.
+
+**Table of Contents**
+
+1. Input files
+2. Output file (tidy data set)
+3. Executing the R script
+4. Explanation of algorithm
+
+---------------------------------------------------------------------------
 
 ### 1. Input files
 
@@ -86,9 +97,9 @@ When combining, include only the "mean" and "std" features, as described above.
 
 For the "mean" and "std" features, I edited a separate file (```myfeatures.txt```) that expands each of the original feature names into a more descriptive feature name.
 
-The 1st column contains the raw names (after removing illegal characters). <br>
-The 2nd column contains the descriptive feature names. <br>
-(Read this data as characters, rather than (default) factors.)
+> The 1st column contains the raw names (after removing illegal characters). <br>
+> The 2nd column contains the descriptive feature names. <br>
+> (Read this data as characters, rather than (default) factors.)
 
 #### 4.7 Combine the X, Y, and sample data sets
 
@@ -100,9 +111,9 @@ Replace the column names with more descriptive choices.
 
 For the activity names, I used the file provided with the data.
 
-The 1st column contains the numeric actiivty labels [1..6]. <br>
-The 2nd column contains the descriptive activity names. <br>
-(Read this data as characters, rather than (default) factors.)
+> The 1st column contains the numeric actiivty labels [1..6]. <br>
+> The 2nd column contains the descriptive activity names. <br>
+> (Read this data as characters, rather than (default) factors.)
 
 Map the numeric activity data to the descriptive activity names using sapply() and replace this column in the data frame.
 
